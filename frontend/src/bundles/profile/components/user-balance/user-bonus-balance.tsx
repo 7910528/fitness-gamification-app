@@ -59,7 +59,7 @@ const UserBonusBalance = ({
                         {bonusBalance.toLocaleString()}
                     </span>
                     <Icon
-                        name={IconName.limeCoinIcon}
+                        name={IconName.coinIcon}
                         size={ComponentSize.SMALL}
                         className="text-lm-yellow-200"
                     />

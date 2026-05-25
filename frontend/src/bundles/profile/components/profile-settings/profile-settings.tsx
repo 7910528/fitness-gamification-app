@@ -14,7 +14,6 @@ import {
     Modal,
     Radio,
 } from '~/bundles/common/components/components.js';
-import { IconColor } from '~/bundles/common/components/icon/enums/enums.js';
 import { ComponentSize, Gender } from '~/bundles/common/enums/enums.js';
 import {
     configureDateString,
@@ -401,11 +400,7 @@ const ProfileSettings: React.FC<Properties> = ({
                     <li className="w-[150px]">
                         <Button
                             label={isLoading ? '' : 'Save'}
-                            leftIcon={
-                                isLoading && (
-                                    <Loader color={IconColor.SECONDARY} />
-                                )
-                            }
+                            leftIcon={isLoading && <Loader />}
                             type="submit"
                             variant={ButtonVariant.PRIMARY}
                             size={ComponentSize.MEDIUM}
@@ -429,13 +424,7 @@ const ProfileSettings: React.FC<Properties> = ({
                             <div className={'flex gap-4'}>
                                 <Button
                                     label={isLoading ? '' : 'Save'}
-                                    leftIcon={
-                                        isLoading && (
-                                            <Loader
-                                                color={IconColor.SECONDARY}
-                                            />
-                                        )
-                                    }
+                                    leftIcon={isLoading && <Loader />}
                                     onClick={onConfirm}
                                     variant={ButtonVariant.PRIMARY}
                                     size={ComponentSize.MEDIUM}

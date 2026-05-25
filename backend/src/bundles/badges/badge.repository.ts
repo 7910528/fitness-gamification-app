@@ -47,7 +47,10 @@ class BadgeRepository {
                 `${DatabaseTableName.ACHIEVEMENTS}.name as achievementName`,
                 `${DatabaseTableName.USER_ACHIEVEMENTS}.createdAt as createdAt`,
             )
-            .orderBy(`${DatabaseTableName.USER_ACHIEVEMENTS}.createdAt`, 'desc');
+            .orderBy(
+                `${DatabaseTableName.USER_ACHIEVEMENTS}.createdAt`,
+                'desc',
+            );
 
         return badges as unknown as BadgeRecord[];
     }

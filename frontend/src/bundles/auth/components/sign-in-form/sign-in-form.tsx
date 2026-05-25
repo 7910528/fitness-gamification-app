@@ -6,7 +6,6 @@ import {
     Link,
     Loader,
 } from '~/bundles/common/components/components.js';
-import { IconColor } from '~/bundles/common/components/icon/enums/icon-colors.enum.js';
 import { AppRoute, ComponentSize } from '~/bundles/common/enums/enums.js';
 import { useAppForm, useCallback } from '~/bundles/common/hooks/hooks.js';
 import {
@@ -103,9 +102,7 @@ const SignInForm: React.FC<Properties> = ({
 
                     <Button
                         label={isLoading ? '' : 'Sign In'}
-                        leftIcon={
-                            isLoading && <Loader color={IconColor.SECONDARY} />
-                        }
+                        leftIcon={isLoading && <Loader />}
                         type="submit"
                         isDisabled={isLoading}
                         size={ComponentSize.MEDIUM}

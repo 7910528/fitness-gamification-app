@@ -16,8 +16,8 @@ import {
 import { AppRoute } from '~/bundles/common/enums/enums.js';
 import { NotFound } from '~/bundles/common/pages/pages.js';
 import { Friends } from '~/bundles/friends/pages/friends.js';
-import { Leaderboards } from '~/bundles/leaderboards/pages/leaderboards.js';
 import { Goals as GoalsPage } from '~/bundles/goals/pages/goals.js';
+import { Leaderboards } from '~/bundles/leaderboards/pages/leaderboards.js';
 import { PasswordReset } from '~/bundles/password-reset/pages/password-reset.js';
 import { Profile } from '~/bundles/profile/pages/profile.js';
 import { Schedule } from '~/bundles/schedules/pages/pages.js';

@@ -1,4 +1,7 @@
-import { AbstractModel, DatabaseTableName } from '~/common/database/database.js';
+import {
+    AbstractModel,
+    DatabaseTableName,
+} from '~/common/database/database.js';
 
 class LevelModel extends AbstractModel {
     public 'level': number;

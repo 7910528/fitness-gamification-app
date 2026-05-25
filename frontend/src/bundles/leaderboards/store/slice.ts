@@ -47,11 +47,10 @@ const { reducer, actions, name } = createSlice({
             state.loadMoreDataStatus = DataStatus.FULFILLED;
             state.totalCount = action.payload.totalCount;
             state.currentUserRank = action.payload.currentUserRank;
-            if (action.meta.arg.page === 1) {
-                state.items = action.payload.items;
-            } else {
-                state.items = [...state.items, ...action.payload.items];
-            }
+            state.items =
+                action.meta.arg.page === 1
+                    ? action.payload.items
+                    : [...state.items, ...action.payload.items];
         });
         builder.addCase(getLeaderboard.rejected, (state) => {
             state.dataStatus = DataStatus.REJECTED;

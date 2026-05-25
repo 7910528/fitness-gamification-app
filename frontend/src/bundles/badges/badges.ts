@@ -11,4 +11,3 @@ const badgesApi = new BadgesApi({
 });
 
 export { badgesApi };
-export { BadgesApi };

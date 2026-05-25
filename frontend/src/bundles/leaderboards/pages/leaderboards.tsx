@@ -210,7 +210,8 @@ const Leaderboards: React.FC = () => {
                             {items.map((item) => {
                                 const isMe = item.id === user.id;
                                 const medal =
-                                    medalClasses[item.rank] ?? 'border border-transparent';
+                                    medalClasses[item.rank] ??
+                                    'border border-transparent';
                                 const meHighlight = isMe
                                     ? 'ring-2 ring-buttonPrimary bg-buttonPrimary/10'
                                     : 'bg-primary';
@@ -219,9 +220,7 @@ const Leaderboards: React.FC = () => {
                                         key={item.id}
                                         item={item}
                                         isMe={isMe}
-                                        {...(isMe
-                                            ? { meRowReference }
-                                            : {})}
+                                        {...(isMe ? { meRowReference } : {})}
                                         className={getValidClassNames(
                                             medal,
                                             meHighlight,
@@ -257,8 +256,7 @@ const LeaderboardRow = ({
     meRowReference,
 }: RowProperties): JSX.Element => {
     const displayName =
-        item.fullName ??
-        (item.username ? `@${item.username}` : item.email);
+        item.fullName ?? (item.username ? `@${item.username}` : item.email);
     const medal = medalEmoji[item.rank] ?? '';
 
     return (
@@ -272,11 +270,7 @@ const LeaderboardRow = ({
             <div className="text-primary w-10 text-center text-lg font-bold">
                 {medal || `#${item.rank}`}
             </div>
-            <Avatar
-                size="sm"
-                email={item.email}
-                avatarUrl={item.avatarUrl}
-            />
+            <Avatar size="sm" email={item.email} avatarUrl={item.avatarUrl} />
             <div className="flex min-w-0 flex-1 flex-col">
                 <span className="text-primary truncate font-semibold">
                     {displayName}
@@ -286,9 +280,7 @@ const LeaderboardRow = ({
                         </span>
                     )}
                 </span>
-                <span className="text-lm-grey-200 text-xs">
-                    {item.email}
-                </span>
+                <span className="text-lm-grey-200 text-xs">{item.email}</span>
             </div>
             <div className="flex flex-col items-end gap-1">
                 <span className="bg-buttonPrimary text-primary inline-flex items-center justify-center rounded-full px-2 py-0.5 text-xs font-bold">

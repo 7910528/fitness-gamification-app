@@ -3,11 +3,9 @@ import { Bars3BottomLeftIcon } from '@heroicons/react/24/solid';
 import { userApi } from '~/bundles/users/users.js';
 import { type UserAuthResponseDto } from '~/bundles/users/users.js';
 
-import { AppRoute, ComponentSize } from '../../enums/enums.js';
-import { Theme } from '../../enums/theme.js';
+import { AppRoute } from '../../enums/enums.js';
 import { useAppSelector, useEffect, useState } from '../../hooks/hooks.js';
-import { Button, Icon, Layout, Link } from '../components.js';
-import { IconColor } from '../icon/enums/enums.js';
+import { Button, Layout, Link } from '../components.js';
 import { Message, Navigation } from './components/components.js';
 import styles from './styles.module.css';
 
@@ -16,10 +14,7 @@ type Properties = {
 };
 
 const Header: React.FC<Properties> = ({ toggleSidebar }): JSX.Element => {
-    const { theme } = useAppSelector(({ theme }) => theme);
-    const user = useAppSelector(
-        ({ auth }) => auth.user as UserAuthResponseDto,
-    );
+    const user = useAppSelector(({ auth }) => auth.user as UserAuthResponseDto);
     const { email, avatarUrl, level, id, bonusBalance } = user;
 
     const [streak, setStreak] = useState<number | null>(null);
@@ -60,33 +55,12 @@ const Header: React.FC<Properties> = ({ toggleSidebar }): JSX.Element => {
                 </div>
                 <div className="hidden w-full max-w-[16rem] md:flex">
                     <Link to={AppRoute.OVERVIEW}>
-                        {theme === Theme.DARK ? (
-                            <Icon
-                                name={'logoHeader'}
-                                color={IconColor.PRIMARY}
-                                size={ComponentSize.EXTRA_LARGE}
-                                className="aspect-video max-h-12"
-                            />
-                        ) : (
-                            <Icon
-                                name={'logoHeaderLight'}
-                                color={IconColor.PRIMARY}
-                                size={ComponentSize.EXTRA_LARGE}
-                                className="aspect-video max-h-12"
-                            />
-                        )}
+                        <span className="text-buttonPrimary font-heavybold text-[3.5rem] leading-[4rem]">
+                            StayFit
+                        </span>
                     </Link>
                 </div>
 
-                <div className="mr-5 md:hidden">
-                    <Link to={AppRoute.OVERVIEW}>
-                        <Icon
-                            name={'logoIcon'}
-                            color={IconColor.PRIMARY}
-                            size={ComponentSize.LARGE}
-                        />
-                    </Link>
-                </div>
                 <div className="flex w-full justify-between">
                     <Message />
                     <Navigation

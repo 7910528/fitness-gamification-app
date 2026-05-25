@@ -6,7 +6,6 @@ import {
     Link,
     Loader,
 } from '~/bundles/common/components/components.js';
-import { IconColor } from '~/bundles/common/components/icon/enums/icon-colors.enum.js';
 import { AppRoute, ComponentSize } from '~/bundles/common/enums/enums.js';
 import { useAppForm, useCallback } from '~/bundles/common/hooks/hooks.js';
 import { userSignUpValidationSchema } from '~/bundles/users/users.js';
@@ -98,11 +97,7 @@ const SignUpForm: React.FC<Properties> = ({
                             label={isLoading ? '' : 'Sign Up'}
                             variant={ButtonVariant.PRIMARY}
                             size={ComponentSize.MEDIUM}
-                            leftIcon={
-                                isLoading && (
-                                    <Loader color={IconColor.SECONDARY} />
-                                )
-                            }
+                            leftIcon={isLoading && <Loader />}
                         />
                     </div>
                 </form>

@@ -350,10 +350,7 @@ class UserRepository implements Repository {
             .withGraphFetched('userDetails');
 
         if (allowedIds) {
-            void baseQuery.whereIn(
-                `${DatabaseTableName.USERS}.id`,
-                allowedIds,
-            );
+            void baseQuery.whereIn(`${DatabaseTableName.USERS}.id`, allowedIds);
         }
 
         const usersForRanking = await baseQuery;
@@ -418,7 +415,9 @@ class UserRepository implements Repository {
         // returns -180). We accept the same convention from the client.
         const dayMs = 24 * 60 * 60 * 1000;
         const toLocalDayKey = (date: Date): string => {
-            const local = new Date(date.getTime() - tzOffsetMinutes * 60 * 1000);
+            const local = new Date(
+                date.getTime() - tzOffsetMinutes * 60 * 1000,
+            );
             const year = local.getUTCFullYear();
             const month = String(local.getUTCMonth() + 1).padStart(2, '0');
             const day = String(local.getUTCDate()).padStart(2, '0');
@@ -445,7 +444,9 @@ class UserRepository implements Repository {
                 new Date().getTime() - tzOffsetMinutes * 60 * 1000,
             );
         } else if (workoutDays.has(yesterdayKey)) {
-            cursor = new Date(yesterday.getTime() - tzOffsetMinutes * 60 * 1000);
+            cursor = new Date(
+                yesterday.getTime() - tzOffsetMinutes * 60 * 1000,
+            );
         } else {
             return 0;
         }

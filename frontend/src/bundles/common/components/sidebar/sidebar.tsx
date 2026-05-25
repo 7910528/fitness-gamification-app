@@ -145,10 +145,6 @@ const Sidebar: React.FC<Properties> = ({
                                 onClick={handleLogout}
                             />
                         </div>
-
-                        <div className="flex w-[10rem] items-center justify-center px-6 py-4">
-                            <Icon name={IconName.poweredByStravaIcon} />
-                        </div>
                     </div>
                 </div>
             </div>

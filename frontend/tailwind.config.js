@@ -161,7 +161,6 @@ export default {
                 accent: ['Lato', ...defaultTheme.fontFamily.sans],
             },
             backgroundImage: {
-                'auth': 'linear-gradient(to right, #FF5A1F 20%, transparent 130%), linear-gradient(to right, #0F172A 20%, transparent 100%), url("~/assets/img/auth-bg.png")',
                 'rectangle':
                     'linear-gradient(89.83deg, #FF5A1F 36.42%, rgba(255, 90, 31, 0) 125.23%)',
                 'goalWidget': 'var(--gradient-goal-widget)',

@@ -10,7 +10,6 @@ import {
 } from 'react-image-crop';
 
 import { Button, Loader } from '~/bundles/common/components/components.js';
-import { IconColor } from '~/bundles/common/components/icon/enums/enums.js';
 
 import { DIMENSION } from './enums/enums.js';
 import { canvasPreview, toFile } from './helpers/helpers.js';
@@ -121,7 +120,7 @@ const Cropper = ({
                 variant="secondary"
                 label="Upload image"
                 onClick={handleClick}
-                leftIcon={isLoading && <Loader color={IconColor.SECONDARY} />}
+                leftIcon={isLoading && <Loader />}
             />
             {crop && (
                 <canvas

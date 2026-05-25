@@ -1,0 +1,35 @@
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="coinGradient" x1="5" y1="5" x2="25" y2="25" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE27A"/>
+      <stop offset="1" stop-color="#F5B301"/>
+    </linearGradient>
+
+    <linearGradient id="innerGradient" x1="8" y1="8" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD95A"/>
+      <stop offset="1" stop-color="#E79A00"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="15" cy="15" r="13" fill="url(#coinGradient)" stroke="#D88A00" stroke-width="1.5"/>
+
+  <!-- Inner circle -->
+  <circle cx="15" cy="15" r="10" fill="url(#innerGradient)" stroke="#FFC933" stroke-width="1"/>
+
+  <path
+    d="M9.2 10.5L12 14L9 18H11.5L13.3 15.6L15 18H17.5L14.5 14L17.2 10.5H14.8L13.2 12.7L11.7 10.5H9.2Z"
+    fill="#FFF4C2"
+  />
+
+  <path
+    d="M18 10.5H21.5C23.2 10.5 24.2 11.4 24.2 13C24.2 14.6 23.2 15.5 21.5 15.5H20.2V18H18V10.5ZM20.2 13.8H21.1C21.8 13.8 22.1 13.5 22.1 13C22.1 12.5 21.8 12.2 21.1 12.2H20.2V13.8Z"
+    fill="#FFF4C2"
+  />
+
+  <ellipse cx="10" cy="9" rx="3" ry="1.5" fill="white" fill-opacity="0.35"/>
+
+  <circle cx="7" cy="15" r="0.7" fill="#FFF4C2"/>
+  <circle cx="23" cy="15" r="0.7" fill="#FFF4C2"/>
+  <circle cx="15" cy="7" r="0.7" fill="#FFF4C2"/>
+  <circle cx="15" cy="23" r="0.7" fill="#FFF4C2"/>
+</svg>

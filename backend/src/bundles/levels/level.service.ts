@@ -14,7 +14,8 @@ class LevelService {
 
     private async getLevels(): Promise<LevelRecord[]> {
         const isFresh =
-            this.cache !== null && Date.now() - this.cacheLoadedAt < CACHE_TTL_MS;
+            this.cache !== null &&
+            Date.now() - this.cacheLoadedAt < CACHE_TTL_MS;
 
         if (!isFresh) {
             this.cache = await this.levelRepository.findAll();

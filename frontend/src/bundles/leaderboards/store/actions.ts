@@ -5,7 +5,7 @@ import { type AsyncThunkConfig } from '~/bundles/common/types/types.js';
 
 import { name as sliceName } from './slice.js';
 
-type GetLeaderboardArg = {
+type GetLeaderboardArgument = {
     page: number;
     limit: number;
     friendsOnly: boolean;
@@ -13,11 +13,11 @@ type GetLeaderboardArg = {
 
 const getLeaderboard = createAsyncThunk<
     LeaderboardResponseDto,
-    GetLeaderboardArg,
+    GetLeaderboardArgument,
     AsyncThunkConfig
 >(`${sliceName}/get`, async (payload, { extra }) => {
     const { userApi } = extra;
     return await userApi.getLeaderboard(payload);
 });
 
-export { getLeaderboard, type GetLeaderboardArg };
+export { type GetLeaderboardArgument as GetLeaderboardArg, getLeaderboard };

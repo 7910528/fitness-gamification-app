@@ -84,8 +84,10 @@ class FriendRepository implements Repository {
         const normalizedSearch = search?.trim().toLowerCase();
         if (normalizedSearch) {
             nonFriendUsers = nonFriendUsers.filter((user) => {
-                const fullName = user.userDetails?.fullName?.toLowerCase() ?? '';
-                const username = user.userDetails?.username?.toLowerCase() ?? '';
+                const fullName =
+                    user.userDetails?.fullName?.toLowerCase() ?? '';
+                const username =
+                    user.userDetails?.username?.toLowerCase() ?? '';
                 const email = user.email?.toLowerCase() ?? '';
                 return (
                     fullName.includes(normalizedSearch) ||

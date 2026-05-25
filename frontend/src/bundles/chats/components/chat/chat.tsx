@@ -187,9 +187,9 @@ const Chat = ({ user, currentChat }: Properties): JSX.Element => {
                                 Premium feature
                             </h3>
                             <p className="text-secondary text-sm">
-                                The AI Personal Assistant is available only
-                                with an active Premium subscription. Subscribe
-                                to chat with the assistant.
+                                The AI Personal Assistant is available only with
+                                an active Premium subscription. Subscribe to
+                                chat with the assistant.
                             </p>
                             <Button
                                 label="Get Premium"

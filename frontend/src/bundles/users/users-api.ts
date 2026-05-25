@@ -1,9 +1,9 @@
+import { type LeaderboardResponseDto } from 'shared';
+
 import { ApiPath, ContentType } from '~/bundles/common/enums/enums.js';
 import { type Http } from '~/framework/http/http.js';
 import { BaseHttpApi } from '~/framework/http-api/http-api.js';
 import { type Storage } from '~/framework/storage/storage.js';
-
-import { type LeaderboardResponseDto } from 'shared';
 
 import { UsersApiPath } from './enums/enums.js';
 import {
@@ -111,12 +111,12 @@ class UserApi extends BaseHttpApi {
         userId?: number;
     }): Promise<{ userId: number; streak: number }> {
         const tzOffset = new Date().getTimezoneOffset();
-        const params = new URLSearchParams();
-        params.set('tzOffset', String(tzOffset));
+        const parameters = new URLSearchParams();
+        parameters.set('tzOffset', String(tzOffset));
         if (payload?.userId) {
-            params.set('userId', String(payload.userId));
+            parameters.set('userId', String(payload.userId));
         }
-        const url = `${this.getFullEndpoint(UsersApiPath.STREAK, {})}?${params.toString()}`;
+        const url = `${this.getFullEndpoint(UsersApiPath.STREAK, {})}?${parameters.toString()}`;
         const response = await this.load(url, {
             method: 'GET',
             contentType: ContentType.JSON,

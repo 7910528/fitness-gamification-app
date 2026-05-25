@@ -13,9 +13,9 @@ const manifestForPlugin: Partial<VitePWAOptions> = {
     outDir: 'build',
     includeAssets: ['apple-touch-icon.png', 'masked-icon.svg'],
     manifest: {
-        name: 'LIME',
-        short_name: 'LIME',
-        description: 'LIME',
+        name: 'STAY_FIT',
+        short_name: 'STAY_FIT',
+        description: 'STAY_FIT',
         icons: [
             {
                 src: '/pwa/images/android-chrome-192x192.png', // when we will have images we can replace it
@@ -44,7 +44,6 @@ const manifestForPlugin: Partial<VitePWAOptions> = {
     workbox: {
         navigateFallbackDenylist: [
             new RegExp('/v1/documentation/static/index.html'),
-            new RegExp('/storybook/.*'),
             new RegExp('/v1/oauth/[^/]+/exchange-token\\?.*'),
             new RegExp('/v1/identity/[^/]+/exchange-token\\?.*'),
         ],

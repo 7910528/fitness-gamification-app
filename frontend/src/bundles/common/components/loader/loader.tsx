@@ -1,29 +1,20 @@
-import { ComponentSize } from '~/bundles/common/enums/component-size.enum.js';
-import { getValidClassNames } from '~/bundles/common/helpers/helpers.js';
-import { type ValueOf } from '~/bundles/common/types/types.js';
+import { Oval } from 'react-loader-spinner';
 
-import { Icon } from '../components.js';
-import { IconColor } from '../icon/enums/enums.js';
+import { getValidClassNames } from '~/bundles/common/helpers/helpers.js';
 
 type Properties = {
     isOverflow?: boolean;
-    color?: ValueOf<typeof IconColor>;
-    size?: ValueOf<typeof ComponentSize>;
 };
 
-const Loader: React.FC<Properties> = ({
-    isOverflow,
-    color = IconColor.PRIMARY,
-    size = ComponentSize.LARGE,
-}): JSX.Element => {
+const Loader: React.FC<Properties> = ({ isOverflow }): JSX.Element => {
     const spinner = (
         <>
             <span aria-hidden="true">
-                <Icon
-                    name="logoIcon"
-                    color={color}
-                    size={size}
-                    className="animate-load"
+                <Oval
+                    height={40}
+                    width={40}
+                    color="rgb(255 90 31)"
+                    visible={true}
                 />
             </span>
             <span className="sr-only">Loading...</span>

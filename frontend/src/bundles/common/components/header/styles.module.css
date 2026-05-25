@@ -1,5 +1,5 @@
 .header {
-    @apply bg-primary z-[2] flex w-full items-center border-b border-sf-slate-200/30 backdrop-blur;
+    @apply bg-primary border-sf-slate-200/30 z-[2] flex w-full items-center border-b backdrop-blur;
 
     grid-area: header;
 }

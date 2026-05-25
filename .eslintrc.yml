@@ -118,7 +118,6 @@ rules:
 
 overrides:
     - files:
-          - commitlint.config.ts
           - dangerfile.ts
       rules:
           'import/no-default-export':

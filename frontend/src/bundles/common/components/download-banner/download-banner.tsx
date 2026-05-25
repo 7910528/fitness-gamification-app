@@ -7,8 +7,7 @@ import {
     useState,
 } from '~/bundles/common/hooks/hooks.js';
 
-import { Button, ButtonVariant, Icon } from '../components.js';
-import { IconColor } from '../icon/enums/icon-colors.enum.js';
+import { Button, ButtonVariant } from '../components.js';
 
 interface ExtendedNavigator extends Navigator {
     standalone?: boolean;
@@ -91,12 +90,6 @@ const DownloadBanner = (): JSX.Element | null => {
             >
                 <XMarkIcon className="mx-1 h-6 w-6" />
             </button>
-            <Icon
-                name={'logoIcon'}
-                color={IconColor.PRIMARY}
-                size={ComponentSize.EXTRA_LARGE}
-                className="sm:h-16 sm:w-16 md:h-20 md:w-20"
-            />
             <p className="text-primary text-bold md:text-normal mr-2 md:text-2xl">
                 Install StayFit for a better experience!
             </p>

@@ -1,7 +1,6 @@
 import { Button, Loader } from '~/bundles/common/components/components.js';
 import { ComponentSize } from '~/bundles/common/enums/enums.js';
 import { FriendCard } from '~/bundles/friends/components/components.js';
-import { IconColor } from '~/bundles/friends/enums/enums.js';
 import { type FriendResponseDto } from '~/bundles/friends/types/types.js';
 
 type Properties = {
@@ -48,11 +47,7 @@ const TabContent = ({
                         onClick={loadMore}
                         label={'Load more'}
                         size={ComponentSize.MEDIUM}
-                        leftIcon={
-                            isLoadingMore && (
-                                <Loader color={IconColor.PRIMARY} />
-                            )
-                        }
+                        leftIcon={isLoadingMore && <Loader />}
                         type="submit"
                         isDisabled={isLoadingMore}
                         variant={'secondary'}

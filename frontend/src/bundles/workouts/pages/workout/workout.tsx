@@ -1,5 +1,6 @@
 import { PlusIcon } from '@heroicons/react/16/solid';
 
+import { actions as authActions } from '~/bundles/auth/store/auth.js';
 import {
     Button,
     ButtonVariant,
@@ -23,7 +24,6 @@ import {
     useParams,
     useState,
 } from '~/bundles/common/hooks/hooks.js';
-import { actions as authActions } from '~/bundles/auth/store/auth.js';
 import {
     CreateWorkoutForm,
     WorkoutItem,
