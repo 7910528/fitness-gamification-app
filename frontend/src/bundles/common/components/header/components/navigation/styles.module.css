@@ -1,0 +1,11 @@
+.navigation {
+    @apply ml-auto  flex items-center justify-center sm:ml-0;
+}
+
+.menu-list {
+    @apply flex w-full items-center justify-center gap-5;
+}
+
+.icon {
+    @apply text-lm-grey-200 w-5 sm:w-6;
+}

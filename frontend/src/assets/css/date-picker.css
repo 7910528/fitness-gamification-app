@@ -1,0 +1,81 @@
+@import url("react-multi-date-picker/styles/layouts/mobile.css");
+
+.custom-date-picker {
+    @apply -top-10 h-full w-full;
+}
+
+.custom-date-picker .ep-arrow {
+    @apply hidden;
+}
+
+.custom-date-picker .rmdp-arrow-container {
+    @apply hover:bg-lm-yellow-100 hover:bg-opacity-0 hover:shadow-none;
+}
+
+.custom-date-picker .rmdp-arrow-container .rmdp-arrow {
+    @apply border-lm-yellow-100 text-primary mt-1.5 hover:border-white;
+}
+
+.custom-date-picker .rmdp-shadow {
+    @apply bg-primary;
+}
+
+.custom-date-picker .rmdp-border-bottom {
+    @apply border-b-0;
+}
+
+.custom-date-picker .rmdp-time-picker div input {
+    @apply bg-transparent;
+}
+
+.custom-date-picker .rmdp-header {
+    @apply mb-2;
+}
+
+.custom-date-picker .rmdp-header-values {
+    @apply text-action;
+}
+
+.custom-date-picker .rmdp-header-values span {
+    @apply text-action hover:opacity-90;
+}
+
+.custom-date-picker .rmdp-week .rmdp-week-day {
+    @apply text-action;
+}
+
+.custom-date-picker .rmdp-calendar {
+    @apply bg-primary rounded-md;
+}
+
+.custom-date-picker .rmdp-day.rmdp-today span {
+    @apply bg-lm-yellow-100 text-lm-black-100 bg-opacity-70 font-bold;
+}
+
+.custom-date-picker .rmdp-ym .rmdp-day > span {
+    @apply hover:bg-lm-yellow-100 hover:text-lm-black-100 text-primary text-[0.625rem] font-bold;
+}
+
+.custom-date-picker .rmdp-day.rmdp-selected span:not(.highlight) {
+    @apply text-lm-black-300 bg-lm-yellow-100 font-bold shadow-none;
+}
+
+.custom-date-picker .rmdp-day .sd {
+    @apply hover:bg-lm-yellow-100 hover:text-lm-black-100 text-primary;
+}
+
+.custom-date-picker .rmdp-day-picker {
+    @apply bg-secondary rounded-md;
+}
+
+.custom-date-picker .rmdp-month-picker {
+    @apply bg-secondary;
+}
+
+.custom-date-picker .rmdp-year-picker {
+    @apply bg-secondary;
+}
+
+.custom-date-picker .rmdp-range {
+    @apply bg-lm-yellow-200 shadow-none;
+}

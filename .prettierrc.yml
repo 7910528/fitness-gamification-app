@@ -1,0 +1,18 @@
+printWidth: 80
+tabWidth: 4
+useTabs: false
+semi: true
+singleQuote: true
+quoteProps: preserve
+trailingComma: all
+bracketSpacing: true
+arrowParens: always
+overrides:
+    - files: '*.css'
+      options:
+          singleQuote: false
+    - files: '*.html'
+      options:
+          printWidth: 9999
+plugins:
+    - 'prettier-plugin-tailwindcss'

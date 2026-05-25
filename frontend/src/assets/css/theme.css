@@ -1,0 +1,104 @@
+/*
+ * StayFit theme — primary action: vibrant orange (#FF5A1F);
+ * secondary accent: emerald (#10B981); surfaces on cool slate.
+ */
+
+:root,
+.light {
+    /* BUTTON */
+    --button-text: rgb(255 255 255);
+    --button-primary: rgb(255 90 31); /* StayFit orange */
+    --button-secondary: rgb(224 70 23); /* deeper orange (hover) */
+    --button-tertiary: rgb(203 213 225); /* slate-300 */
+
+    /* TEXT */
+    --text-primary: rgb(15 23 42); /* slate-900 */
+    --text-secondary: rgb(71 85 105); /* slate-600 */
+    --text-action: rgb(255 90 31); /* orange */
+    --text-info-section: rgb(30 41 59); /* slate-800 */
+    --text-card: rgb(100 116 139); /* slate-500 */
+
+    /* BACKGROUND */
+    --background-primary: rgb(255 255 255);
+    --background-secondary: rgb(241 245 249); /* slate-100 */
+    --background-tertiary: rgb(255 237 213); /* orange-100 */
+    --background-schedule: rgb(254 215 170); /* orange-200 */
+
+    /* BORDER */
+    --border-primary: rgb(203 213 225); /* slate-300 */
+    --border-secondary: rgb(255 255 255);
+    --border-inactive: rgb(226 232 240); /* slate-200 */
+
+    /* RING */
+    --ring-primary: rgb(255 90 31);
+    --ring-inactive: rgb(226 232 240);
+
+    /* GRADIENTS */
+    --gradient-goal-widget: linear-gradient(
+        89.83deg,
+        rgb(255 90 31) 24.5%,
+        rgb(224 70 23) 125.23%
+    );
+    --gradient-schedule-widget: linear-gradient(
+        234.96deg,
+        #ff5a1f -19.3%,
+        rgba(255 90 31 / 0%) 100%
+    );
+
+    /* STROKE */
+    --stroke-progress-base-bg: rgb(255 90 31);
+
+    /* CIRCLE PROGRESS BAR */
+    --circle-primary: #ff5a1f;
+
+    /* MODAL */
+    --modal-overlay: rgb(15 23 42 / 60%);
+}
+
+.dark {
+    /* BUTTON */
+    --button-text: rgb(15 23 42);
+    --button-primary: rgb(255 122 71); /* lighter orange on dark */
+    --button-secondary: rgb(255 90 31); /* orange */
+    --button-tertiary: rgb(51 65 85); /* slate-700 */
+
+    /* TEXT */
+    --text-primary: rgb(248 250 252); /* slate-50 */
+    --text-secondary: rgb(148 163 184); /* slate-400 */
+    --text-action: rgb(255 122 71);
+    --text-info-section: rgb(148 163 184);
+    --text-card: rgb(255 255 255);
+
+    /* BACKGROUND */
+    --background-primary: rgb(15 23 42); /* slate-900 */
+    --background-secondary: rgb(2 6 23); /* slate-950 */
+    --background-tertiary: rgb(30 41 59); /* slate-800 */
+    --background-schedule: rgb(30 41 59);
+
+    /* BORDER */
+    --border-primary: rgb(248 250 252);
+    --border-secondary: rgb(0 0 0);
+    --border-inactive: rgb(30 41 59);
+
+    /* RING */
+    --ring-primary: rgb(255 122 71);
+    --ring-inactive: rgb(30 41 59);
+
+    /* GRADIENTS */
+    --gradient-goal-widget: linear-gradient(
+        89.83deg,
+        rgb(255 122 71) 36.42%,
+        rgb(255 122 71 / 0%) 125.23%
+    );
+    --gradient-schedule-widget: linear-gradient(
+        234.96deg,
+        #ff7a47 -19.3%,
+        rgba(255 122 71 / 0%) 100%
+    );
+
+    /* STROKE */
+    --stroke-progress-base-bg: rgb(2 6 23);
+
+    /* CIRCLE PROGRESS BAR */
+    --circle-primary: #02061a;
+}

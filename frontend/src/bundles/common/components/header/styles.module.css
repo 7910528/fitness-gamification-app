@@ -1,0 +1,9 @@
+.header {
+    @apply bg-primary z-[2] flex w-full items-center border-b border-sf-slate-200/30 backdrop-blur;
+
+    grid-area: header;
+}
+
+.header-container {
+    @apply flex w-full items-center justify-between;
+}

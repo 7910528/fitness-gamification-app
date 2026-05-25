@@ -1,0 +1,40 @@
+.base-layout {
+    grid-template:
+        "header header"
+        "aside main";
+
+    @apply grid grid-cols-[16rem,auto] grid-rows-[5.5rem,auto] overflow-hidden transition-all duration-[0.5s] ease-[ease-in-out] sm:grid-cols-[0,auto] lg:grid-cols-[18rem,auto];
+}
+
+.content-container {
+    @apply bg-secondary max-h-90 relative flex min-w-[320px] justify-center gap-8 overflow-y-auto overflow-x-hidden p-8;
+
+    grid-area: main;
+}
+
+.base-layout:not(.sidebar-closed) {
+    @apply overflow-hidden;
+}
+
+.base-layout.sidebar-closed {
+    grid-template:
+        "header header" 88px
+        "aside main" /0;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--button-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--button-secondary);
+}
